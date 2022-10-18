@@ -13,6 +13,7 @@ namespace Koperasi.Controllers
             _logger = logger;
         }
 
+        [HttpGet("/dashboard")]
         public IActionResult Index()
         {
             return View();
