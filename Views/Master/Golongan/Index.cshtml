@@ -1,0 +1,65 @@
+﻿@{
+	ViewBag.Title = "Master Data Golongan";
+}
+
+@section styles {
+	<link href="~/assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link href="~/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+	<style>
+		.dataTables_info {
+			color: #969ba0 !important;
+		}
+	</style>
+}
+
+	<!--Modal Window-->
+	<div id='myModal' class='modal fade' data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div id='myModalContent'></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="d-flex mb-3">
+			<div class="mb-3 align-items-center me-auto">
+				<h4 class="card-title">Master Data</h4>
+				<span class="fs-12">Golongan</span>
+			</div>
+			<a href="javascript:void(0);" data-href="/master/golongan/create" class="btn btn-outline-primary mb-3 showMe"><i class="fa fa-plus me-3 scale3"></i>Tambah</a>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Tabel Data Golongan</h4>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table id="tblData" class="display" style="width:100%;">
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Nama Golongan</th>
+										<th>Aksi</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+@section vendorjs {
+	<script src="~/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="~/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+	<script src="~/js/modalForm.js"></script>
+}
+
+	@section scripts {
+	<script src="~/pages/master/golongan.js"></script>
+}

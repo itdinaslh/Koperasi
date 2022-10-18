@@ -1,0 +1,30 @@
+﻿@model Penempatan
+
+<div class="modal-header">
+    @if (Model.PenempatanId == 0)
+    {
+        <h4 class="modal-title">Tambah Penempatan</h4>
+    }
+    else
+    {
+        <h4 class="modal-title">Edit Penempatan</h4>
+    }
+
+    <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
+</div>
+
+<div class="modal-body mx-50 pb-3">
+    <form action="/master/penempatan/save" class="row gy-1 gx-2 mt-75" method="post">
+        <input type="hidden" asp-for="PenempatanId" />
+        
+        <div class="col-12">
+            <label class="form-label">Nama Penempatan</label>
+            <input type="text" asp-for="NamaPenempatan" class="form-control" autocomplete="off" autofocus />
+            <span asp-validation-for="NamaPenempatan" class="text-danger"></span>
+        </div>
+        <div class="col-12 text-end mt-2">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </div>
+    </form>
+</div>

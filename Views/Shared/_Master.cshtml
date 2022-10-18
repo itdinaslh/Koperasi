@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Koperasi Dinas Lingkungan Hidup Prov. DKI Jakarta" />
+	<meta name="author" content="Rangga" />
+	<meta name="robots" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Koperasi Dinas Lingkungan Hidup Prov. DKI Jakarta" />
+	<meta name="format-detection" content="telephone=no">	
+	<title>@ViewBag.Title - Koperasi Suka Resik Dinas LH</title>
+
+	<!-- FAVICONS ICON -->
+	<link rel="shortcut icon" type="image/png" href="~/assets/images/logo-dinas.ico" />
+	
+	@await RenderSectionAsync("styles", required: false)
+
+	<link href="~/assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+	<link rel="stylesheet" href="~/assets/vendor/nouislider/nouislider.min.css">
+	<!-- Style css -->
+	<link href="~/assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+	<!-- Preloader -->
+	<partial name="_Preloader" />
+
+	<!-- Main wrapper -->
+	<div id="main-wrapper">
+		<!-- Nav header-->
+		<partial name="_NavHeader" />
+
+		<!-- Header -->
+		<partial name="_Header" />
+
+		<!-- Sidebar -->
+		<partial name="_SidebarAdmin" />
+
+		<!-- Content -->
+		<div class="content-body">
+			@RenderBody()
+		</div>
+
+		<!-- Footer -->
+		<div class="footer">
+			<div class="copyright">
+				<p>Copyright © Dinas Lingkungan Hidup Prov. DKI Jakarta</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Required vendors -->
+	<script src="~/assets/vendor/global/global.min.js"></script>
+	<script src="~/assets/vendor/chart.js/Chart.bundle.min.js"></script>
+
+	@await RenderSectionAsync("vendorjs", required: false)
+
+	<script src="~/assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+	<script src="~/assets/js/custom.min.js"></script>
+	<script src="~/assets/js/dlabnav-init.js"></script>
+
+	@await RenderSectionAsync("scripts", required: false)
+</body>
+</html>

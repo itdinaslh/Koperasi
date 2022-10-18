@@ -1,0 +1,6 @@
+﻿bin/*
+obj/*
+/.vs
+/.idea
+/Program.cs
+/appsettings.json

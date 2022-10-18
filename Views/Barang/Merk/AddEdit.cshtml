@@ -1,0 +1,36 @@
+﻿@model MerkVM
+
+<div class="modal-header">
+    @if (Model.MerkBarang.MerkBarangId == 0)
+    {
+        <h4 class="modal-title">Tambah Merk Barang</h4>
+    }
+    else
+    {
+        <h4 class="modal-title">Edit Merk Barang</h4>
+    }
+
+    <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
+</div>
+
+<div class="modal-body mx-50 pb-3">
+    <form action="/master/barang/merk/save" class="row gy-1 gx-2 mt-75" method="post">
+        <input type="hidden" asp-for="MerkBarang.MerkBarangId" />        
+        <div class="col-12">
+            <div class="form-group mb-2">
+                <label class="form-label">Nama Merk Barang</label>
+                <input type="text" asp-for="MerkBarang.NamaMerk" class="form-control" autocomplete="off" autofocus />
+                <span asp-validation-for="MerkBarang.NamaMerk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Merk Barang</label>
+                <select id="sJenis" asp-for="MerkBarang.JenisBarangId" class="form-control"></select>
+                <span asp-validation-for="MerkBarang.JenisBarangId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-12 text-end mt-2">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </div>
+    </form>
+</div>
