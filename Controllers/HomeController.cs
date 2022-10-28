@@ -19,6 +19,12 @@ namespace Koperasi.Controllers
             return View();
         }
 
+        [HttpGet("/")]
+        public IActionResult MyHome()
+        {
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Privacy()
         {
             return View();
