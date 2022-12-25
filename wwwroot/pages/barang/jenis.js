@@ -27,11 +27,11 @@ function loadTable() {
             dataType: "json"
         },
         columns: [
-            { data: 'jenisBarangId', name: "jenisBarangId" },
+            { data: 'jenisBarangID', name: "jenisBarangID" },
             { data: "namaJenis", name: "namaJenis", autoWidth: true },
             {
-                data: 'jenisBarangId',
-                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/barang/jenis/edit/?id=" + row.jenisBarangId + "'> Edit</button>" }
+                data: 'jenisBarangID',
+                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/barang/jenis/edit/?id=" + row.jenisBarangID + "'> Edit</button>" }
             }
         ],
         order: [[0, "desc"]]

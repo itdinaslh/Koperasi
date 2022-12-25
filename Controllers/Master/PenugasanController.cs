@@ -3,9 +3,11 @@ using Koperasi.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Koperasi.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Koperasi.Controllers;
 
+[Authorize(Roles = "SysAdmin, KoperasiAdmin")]
 public class PenugasanController : Controller
 {
     private readonly ITugasTempat repo;
@@ -30,7 +32,7 @@ public class PenugasanController : Controller
     [HttpGet("/master/penugasan/edit")]
     public async Task<IActionResult> Edit(int id)
     {
-        Penugasan? data = await repo.Penugasans.FirstOrDefaultAsync(p => p.PenugasanId == id);
+        Penugasan? data = await repo.Penugasans.FirstOrDefaultAsync(p => p.PenugasanID == id);
 
         if (data is not null)
         {

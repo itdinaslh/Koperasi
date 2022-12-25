@@ -38,7 +38,7 @@ table.dataTable tbody tr, table.dataTable tbody td{
 table.dataTable thead th{
     color: $black;
 	white-space:nowrap;
-	font-size:18px;
+	font-size:14px;
 	text-transform:capitalize;
     font-weight: 600;
 	padding: 20px 15px;
@@ -51,8 +51,8 @@ table.dataTable thead th{
 }
 
 table.dataTable tbody td{
-    padding: 20px 15px;
-	font-size:16px;
+    padding: 15px 10px;
+	font-size:14px;
 	font-weight: 600;
 	border-bottom:0;
 	@include respond('phone') {
@@ -138,14 +138,14 @@ table.dataTable tfoot th{
 	}
 	span{
 		.paginate_button{
-			height:50px;
-			width:50px;
+			height:35px;
+			width:35px;
 			padding:0;
 			margin-left: 0px;
 			margin:0 2px;
-			line-height:50px;
+			line-height:35px;
 			text-align:center;
-			font-size:18px;
+			font-size:14px;
 			border-radius:1rem;
 			color:var(--primary)!important;
 			border:0!important;

@@ -17,12 +17,12 @@ public class GolonganService : IGolongan
 
     public async Task SaveDataAsync(Golongan golongan)
     {
-        if (golongan.GolonganId == 0)
+        if (golongan.GolonganID == 0)
         {
             await context.AddAsync(golongan);
         } else
         {
-            Golongan? data = await context.Golongans.FindAsync(golongan.GolonganId);
+            Golongan? data = await context.Golongans.FindAsync(golongan.GolonganID);
 
             if (data is not null)
             {

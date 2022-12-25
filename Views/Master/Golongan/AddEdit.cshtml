@@ -1,7 +1,7 @@
 ﻿@model Golongan
 
 <div class="modal-header">
-    @if (Model.GolonganId == 0)
+    @if (Model.GolonganID == 0)
     {
         <h4 class="modal-title">Tambah Golongan</h4>
     }
@@ -15,7 +15,7 @@
 
 <div class="modal-body mx-50 pb-3">
     <form action="/master/golongan/save" class="row gy-1 gx-2 mt-75" method="post">
-        <input type="hidden" asp-for="GolonganId" />
+        <input type="hidden" asp-for="GolonganID" />
         
         <div class="col-12">
             <label class="form-label">Nama Golongan</label>

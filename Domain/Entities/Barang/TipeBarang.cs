@@ -8,7 +8,7 @@ public class TipeBarang
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int TipeBarangId { get; set; }
+    public int TipeBarangID { get; set; }
 
 #nullable disable
 

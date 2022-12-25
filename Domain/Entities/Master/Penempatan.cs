@@ -8,7 +8,7 @@ public class Penempatan
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int PenempatanId { get; set; }
+    public int PenempatanID { get; set; }
 
 #nullable disable
 

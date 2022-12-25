@@ -8,7 +8,7 @@ public class Golongan
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int GolonganId { get; set; }
+    public int GolonganID { get; set; }
 
 #nullable disable
 

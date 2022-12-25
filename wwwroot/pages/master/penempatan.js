@@ -27,11 +27,11 @@ function loadTable() {
             dataType: "json"
         },
         columns: [
-            { data: 'penempatanId', name: "penempatanId" },
+            { data: 'penempatanID', name: "penempatanID" },
             { data: "namaPenempatan", name: "namaPenempatan", autoWidth: true },
             {
-                data: 'penugasanId',
-                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/master/penempatan/edit/?id=" + row.penempatanId + "'> Edit</button>" }
+                data: 'penempatanID',
+                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/master/penempatan/edit/?id=" + row.penempatanID + "'> Edit</button>" }
             }
         ],
         order: [[0, "desc"]]

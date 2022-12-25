@@ -27,12 +27,12 @@ function loadTable() {
             dataType: "json"
         },
         columns: [
-            { data: 'merkBarangId', name: "merkBarangId" },
+            { data: 'merkBarangID', name: "merkBarangId" },
             { data: "namaMerk", name: "namaMerk", autoWidth: true },
             { data: "namaJenis", name: "namaJenis", autoWidth: true },
             {
-                data: 'merkBarangId',
-                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/barang/merk/edit/?id=" + row.merkBarangId + "'> Edit</button>" }
+                data: 'merkBarangID',
+                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/barang/merk/edit/?id=" + row.merkBarangID + "'> Edit</button>" }
             }
         ],
         order: [[0, "desc"]]

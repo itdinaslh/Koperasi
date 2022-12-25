@@ -1,7 +1,7 @@
 ﻿@model JenisBarang
 
 <div class="modal-header">
-    @if (Model.JenisBarangId == 0)
+    @if (Model.JenisBarangID == 0)
     {
         <h4 class="modal-title">Tambah Jenis Barang</h4>
     }
@@ -15,7 +15,7 @@
 
 <div class="modal-body mx-50 pb-3">
     <form action="/master/barang/jenis/save" class="row gy-1 gx-2 mt-75" method="post">
-        <input type="hidden" asp-for="JenisBarangId" />
+        <input type="hidden" asp-for="JenisBarangID" />
         
         <div class="col-12">
             <label class="form-label">Nama Jenis Barang</label>

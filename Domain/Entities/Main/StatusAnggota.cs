@@ -8,7 +8,7 @@ public class StatusAnggota
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int StatusAnggotaId { get; set; }
+    public int StatusAnggotaID { get; set; }
 
 #nullable disable
 

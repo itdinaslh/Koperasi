@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Koperasi.Helpers;
 using Koperasi.Domain.Repositories;
 using Koperasi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Koperasi.Controllers;
 
+[Authorize]
 public class BarangController : Controller
 {
     private readonly IBarang repo;

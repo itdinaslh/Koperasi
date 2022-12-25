@@ -8,7 +8,7 @@ public class MerkBarang
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int MerkBarangId { get; set; }
+    public int MerkBarangID { get; set; }
 
 #nullable disable
 

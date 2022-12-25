@@ -8,7 +8,7 @@ public class Penugasan
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int PenugasanId { get; set; }
+    public int PenugasanID { get; set; }
 
 #nullable disable
     [Required(ErrorMessage = "Nama tempat penugasan wajib diisi!")]

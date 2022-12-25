@@ -27,11 +27,11 @@ function loadTable() {
             dataType: "json"
         },
         columns: [
-            { data: 'golonganId', name: "golonganId" },
+            { data: 'golonganID', name: "golonganID" },
             { data: "namaGolongan", name: "namaGolongan", autoWidth: true },
             {
-                data: 'penugasanId',
-                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/master/golongan/edit/?id=" + row.golonganId + "'> Edit</button>" }
+                data: 'golonganID',
+                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/master/golongan/edit/?id=" + row.golonganID + "'> Edit</button>" }
             }
         ],
         order: [[0, "desc"]]

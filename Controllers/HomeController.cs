@@ -1,4 +1,5 @@
 ﻿using Koperasi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -14,6 +15,7 @@ namespace Koperasi.Controllers
         }
 
         [HttpGet("/dashboard")]
+        [Authorize(Roles = "SysAdmin, KoperasiAdmin")]
         public IActionResult Index()
         {
             return View();
@@ -23,11 +25,6 @@ namespace Koperasi.Controllers
         public IActionResult MyHome()
         {
             return RedirectToAction("Index");
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

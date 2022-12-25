@@ -27,11 +27,11 @@ function loadTable() {
             dataType: "json"
         },
         columns: [
-            { data: 'penugasanId', name: "penugasanid"},
+            { data: 'penugasanID', name: "penugasanID"},
             { data: "namaPenugasan", name: "namaPenugasan", autoWidth: true },            
             {
-                data: 'penugasanId',
-                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/master/penugasan/edit/?id=" + row.penugasanId + "'> Edit</button>" }
+                data: 'penugasanID',
+                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/master/penugasan/edit/?id=" + row.penugasanID + "'> Edit</button>" }
             }
         ],
         order: [[0, "desc"]]

@@ -19,12 +19,12 @@ public class BarangService : IBarang
 
     public async Task SaveJenisBarang(JenisBarang jenis)
     {
-        if (jenis.JenisBarangId == 0)
+        if (jenis.JenisBarangID == 0)
         {
             await context.AddAsync(jenis);
         } else
         {
-            JenisBarang? data = await context.JenisBarangs.FindAsync(jenis.JenisBarangId);
+            JenisBarang? data = await context.JenisBarangs.FindAsync(jenis.JenisBarangID);
 
             if (data is not null)
             {
@@ -40,13 +40,13 @@ public class BarangService : IBarang
 
     public async Task SaveMerkBarang(MerkBarang merk)
     {
-        if (merk.MerkBarangId == 0)
+        if (merk.MerkBarangID == 0)
         {
             await context.AddAsync(merk);
         }
         else
         {
-            MerkBarang? data = await context.MerkBarangs.FindAsync(merk.MerkBarangId);
+            MerkBarang? data = await context.MerkBarangs.FindAsync(merk.MerkBarangID);
 
             if (data is not null)
             {

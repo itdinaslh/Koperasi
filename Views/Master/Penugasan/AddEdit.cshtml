@@ -1,7 +1,7 @@
 ﻿@model Penugasan
 
 <div class="modal-header">
-    @if (Model.PenugasanId == 0)
+    @if (Model.PenugasanID == 0)
     {
         <h4 class="modal-title">Tambah Penugasan</h4>
     }
@@ -10,12 +10,12 @@
         <h4 class="modal-title">Edit Penugasan</h4>
     }
 
-    <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 </div>
 
 <div class="modal-body mx-50 pb-3">
     <form action="/master/penugasan/save" class="row gy-1 gx-2 mt-75" method="post">
-        <input type="hidden" asp-for="PenugasanId" />
+        <input type="hidden" asp-for="PenugasanID" />
         
         <div class="col-12">
             <label class="form-label">Nama Penugasan</label>

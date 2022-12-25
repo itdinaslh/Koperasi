@@ -1,11 +1,13 @@
 ﻿using Koperasi.Domain.Entities;
 using Koperasi.Domain.Repositories;
 using Koperasi.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Koperasi.Controllers;
 
+[Authorize(Roles = "SysAdmin, KoperasiAdmin")]
 public class GolonganController : Controller
 {
 	private readonly IGolongan repo;
@@ -30,7 +32,7 @@ public class GolonganController : Controller
 	[HttpGet("/master/golongan/edit")]
 	public async Task<IActionResult> Edit(int id)
 	{
-		Golongan? data = await repo.Golongans.FirstOrDefaultAsync(i => i.GolonganId == id);
+		Golongan? data = await repo.Golongans.FirstOrDefaultAsync(i => i.GolonganID == id);
 
 		if (data is not null)
 		{

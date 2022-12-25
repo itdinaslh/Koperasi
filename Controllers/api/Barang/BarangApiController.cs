@@ -66,7 +66,7 @@ public class BarangApiController : ControllerBase
 
         var init = repo.MerkBarangs.Select(m => new
         {
-            merkBarangId = m.MerkBarangId,
+            merkBarangId = m.MerkBarangID,
             namaMerk = m.NamaMerk,
             namaJenis = m.JenisBarang.NamaJenis
         });
@@ -97,7 +97,7 @@ public class BarangApiController : ControllerBase
             .Where(k => !String.IsNullOrEmpty(term) ?
                 k.NamaJenis.ToLower().Contains(term.ToLower()) : true
             ).Select(s => new {
-                id = s.JenisBarangId,
+                id = s.JenisBarangID,
                 namaJenis = s.NamaJenis
             }).Take(10).ToListAsync();
 

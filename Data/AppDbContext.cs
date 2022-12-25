@@ -25,4 +25,7 @@ public class AppDbContext : DbContext
     public DbSet<JenisBarang> JenisBarangs { get; set; }
     public DbSet<MerkBarang> MerkBarangs { get; set; }
     public DbSet<TipeBarang> TipeBarangs { get; set; }
+
+    // Keanggotaan
+    public DbSet<Anggota> Anggota { get; set; }
 }

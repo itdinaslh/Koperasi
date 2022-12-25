@@ -20,12 +20,12 @@ public class TugasTempatService : ITugasTempat
 
     public async Task SavePenempatan(Penempatan penempatan)
     {
-        if (penempatan.PenempatanId == 0)
+        if (penempatan.PenempatanID == 0)
         {
             await context.AddAsync(penempatan);
         } else
         {
-            Penempatan? data = await context.Penempatans.FindAsync(penempatan.PenempatanId);
+            Penempatan? data = await context.Penempatans.FindAsync(penempatan.PenempatanID);
 
             if (data is not null)
             {
@@ -41,12 +41,12 @@ public class TugasTempatService : ITugasTempat
 
     public async Task SavePenugasan(Penugasan penugasan)
     {
-        if (penugasan.PenugasanId == 0)
+        if (penugasan.PenugasanID == 0)
         {
             await context.AddAsync(penugasan);
         } else
         {
-            Penugasan? data = await context.Penugasans.FirstOrDefaultAsync(p => p.PenugasanId == penugasan.PenugasanId);
+            Penugasan? data = await context.Penugasans.FirstOrDefaultAsync(p => p.PenugasanID == penugasan.PenugasanID);
 
             if (data is not null)
             {
