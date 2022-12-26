@@ -1,15 +1,15 @@
-﻿#floating-button {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
+﻿.flatbtn {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
     background: #db4437 !important;
-    position: fixed;
-    bottom: 50px;
-    right: 35px;
-    cursor: pointer;
-    border: none;
-    color: white;
-    font-size: 38px;
-    font-weight: 300;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    position: fixed !important;
+    bottom: 50px !important;
+    right: 35px !important;
+    cursor: pointer !important;
+    border: none !important;
+    color: white !important;
+    font-size: 38px !important;
+    font-weight: 300 !important;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2) !important;
 }
