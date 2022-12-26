@@ -31,7 +31,16 @@ function loadTable() {
             { data: "namaPenugasan", name: "namaPenugasan", autoWidth: true },            
             {
                 data: 'penugasanID',
-                render: function (data, type, row) { return "<button type='button' class='btn btn-sm btn-success mr-2 showMe' style='width:100%;' data-href='/master/penugasan/edit/?id=" + row.penugasanID + "'> Edit</button>" }
+                render: function (data, type, row) {
+                    return `<div class="dropdown-center ms-auto text-center">
+                                <div class="btn-link" data-bs-toggle="dropdown">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item showMe" href="javascript:void(0)" data-href="/master/penugasan/edit/?id=` + row.penugasanID + `">Edit</a>
+                                </div>
+                            </div>`
+                }
             }
         ],
         order: [[0, "desc"]]

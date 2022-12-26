@@ -3,7 +3,11 @@
 .dropend,
 .dropdown,
 .dropstart {
-  position: relative;
+    position: relative
+}
+
+.dropdown-center {
+    position: relative;
 }
 
 .dropdown-toggle {
@@ -143,7 +147,7 @@
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   clear: both;
   font-weight: $font-weight-normal;
-  color: $dropdown-link-color;
+  color: white !important;
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap; // prevent links from randomly breaking onto new lines
