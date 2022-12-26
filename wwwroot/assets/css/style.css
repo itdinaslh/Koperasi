@@ -9333,7 +9333,8 @@ label {
   transition: all .2s ease;
   z-index: 5; }
   .nav-header .logo-abbr {
-    max-width: 47px; }
+    max-width: 47px;
+    margin-top: 15px; }
     @media only screen and (max-width: 1400px) {
       .nav-header .logo-abbr {
         max-width: 45px; } }
@@ -9373,7 +9374,7 @@ label {
         padding-right: 0;
         justify-content: center; } }
   .nav-header .brand-title {
-    margin-left: 15px;
+    margin-left: 0;
     margin-top: 15px;
     max-width: 140px;
     font-size: 38px;

@@ -1,12 +1,6 @@
 /*
     Table of Contents
 
-    Name                 : Ventic
-    Author               : DexignZone
-    Author Portfolio     : https://themeforest.net/user/dexignzone/portfolio
-    
-
-
     Table of Sass Contents
 
     1. Abstracts
@@ -8520,7 +8514,7 @@ body {
   height: 100%;
   position: relative;
   max-width: 100%;
-  font-size: 0.875rem; }
+  font-size: 0.815rem; }
   @media only screen and (max-width: 991px) {
     body {
       font-size: 0.875rem; } }
@@ -9298,6 +9292,9 @@ label {
   color: #fff; }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  min-height: 20px;
   padding-left: 17.1875rem;
   background-color: #f6f6f6;
   font-size: 13px; }
@@ -9336,7 +9333,8 @@ label {
   transition: all .2s ease;
   z-index: 5; }
   .nav-header .logo-abbr {
-    max-width: 47px; }
+    max-width: 47px;
+    margin-top: 15px; }
     @media only screen and (max-width: 1400px) {
       .nav-header .logo-abbr {
         max-width: 45px; } }
@@ -9376,7 +9374,7 @@ label {
         padding-right: 0;
         justify-content: center; } }
   .nav-header .brand-title {
-    margin-left: 15px;
+    margin-left: 0;
     margin-top: 15px;
     max-width: 140px;
     font-size: 38px;
@@ -9700,7 +9698,7 @@ svg.pulse-svg {
   .header-left .breadcrumb {
     margin-bottom: 0; }
   .header-left .dashboard_bar {
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 600;
     color: #000; }
     @media only screen and (max-width: 1600px) {
@@ -12439,6 +12437,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
       padding: 8px 24px; }
 
 .copyright {
+  min-height: 50px;
   padding: 0 30px;
   color: #9fa4a6;
   margin-top: 30px; }
@@ -12687,8 +12686,8 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 [data-sidebar-style="full"][data-layout="vertical"] .dlabnav .metismenu > li {
   padding: 0 30px; }
   [data-sidebar-style="full"][data-layout="vertical"] .dlabnav .metismenu > li > a {
-    font-size: 18px;
-    padding: 22px 20px;
+    font-size: 14px;
+    padding: 15px 17px;
     border-radius: 1rem;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -22717,10 +22716,10 @@ button {
     box-shadow: none; }
 
 .btn {
-  padding: 0.938rem 1.5rem;
+  padding: 0.938rem 1.4rem;
   border-radius: 1.125rem;
   font-weight: 400;
-  font-size: 1rem; }
+  font-size: 0.8rem; }
   .btn:hover, .btn:focus, .btn:active, .btn.active {
     outline: 0 !important; }
   @media only screen and (max-width: 1400px) {
@@ -22743,6 +22742,22 @@ button {
   .btn-primary:disabled, .btn-primary.disabled {
     background-color: var(--primary);
     border-color: var(--primary); }
+
+.flatbtn {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50% !important;
+  background: #db4437 !important;
+  position: fixed !important;
+  bottom: 50px !important;
+  right: 35px !important;
+  cursor: pointer !important;
+  border: none !important;
+  color: white !important;
+  font-size: 33px !important;
+  font-weight: 300 !important;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2) !important;
+  padding-left: 18px; }
 
 .btn-link {
   color: var(--primary);
@@ -25527,7 +25542,7 @@ table.dataTable tbody tr, table.dataTable tbody td {
 table.dataTable thead th {
   color: #000;
   white-space: nowrap;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: capitalize;
   font-weight: 600;
   padding: 20px 15px; }
@@ -25538,8 +25553,8 @@ table.dataTable thead th {
       font-size: 16px; } }
 
 table.dataTable tbody td {
-  padding: 20px 15px;
-  font-size: 16px;
+  padding: 15px 10px;
+  font-size: 14px;
   font-weight: 600;
   border-bottom: 0; }
   @media only screen and (max-width: 575px) {
@@ -25613,14 +25628,14 @@ table.dataTable tfoot th {
         width: 50px;
         line-height: 54px; } }
   .dataTables_wrapper .dataTables_paginate span .paginate_button {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     padding: 0;
     margin-left: 0px;
     margin: 0 2px;
-    line-height: 50px;
+    line-height: 35px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 1rem;
     color: var(--primary) !important;
     border: 0 !important; }
@@ -26566,7 +26581,7 @@ table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.
     background: rgba(255, 255, 255, 0.4);
     text-align: center; }
   .invoice-card-row .invoice-card .card-body {
-    padding: 35px 30px 45px 30px; }
+    padding: 20px 30px 25px 30px; }
   .invoice-card-row .invoice-card .invoice-num {
     font-size: 38px;
     margin-bottom: 5px; }
