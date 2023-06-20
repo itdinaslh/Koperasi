@@ -16,6 +16,7 @@ public class BarangService : IBarang
     public IQueryable<JenisBarang> JenisBarangs => context.JenisBarangs;
 
     public IQueryable<MerkBarang> MerkBarangs => context.MerkBarangs;
+    public IQueryable<TipeBarang> TipeBarangs => context.TipeBarangs;
 
     public async Task SaveJenisBarang(JenisBarang jenis)
     {
@@ -52,6 +53,29 @@ public class BarangService : IBarang
             {
                 data.NamaMerk = merk.NamaMerk;
                 data.JenisBarangId = merk.JenisBarangId;
+                data.UpdatedAt = DateTime.Now;
+
+                context.Update(data);
+            }
+        }
+
+        await context.SaveChangesAsync();
+    }
+
+    public async Task SaveTipeBarang(TipeBarang tipe)
+    {
+        if (tipe.TipeBarangID == 0)
+        {
+            await context.AddAsync(tipe);
+        }
+        else
+        {
+            TipeBarang? data = await context.TipeBarangs.FindAsync(tipe.TipeBarangID);
+
+            if (data is not null)
+            {
+                data.NamaTipe = tipe.NamaTipe;
+                data.MerkBarangId = tipe.MerkBarangId;
                 data.UpdatedAt = DateTime.Now;
 
                 context.Update(data);

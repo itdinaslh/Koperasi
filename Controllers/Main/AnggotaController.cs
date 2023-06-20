@@ -12,4 +12,10 @@ public class AnggotaController : Controller
     {
         return View("~/Views/Main/Anggota/List.cshtml");
     }
+
+	[HttpGet("/anggota/create")]
+	public IActionResult Create()
+	{
+		return PartialView("~/Views/Main/Anggota/AddEdit.cshtml");
+	}
 }

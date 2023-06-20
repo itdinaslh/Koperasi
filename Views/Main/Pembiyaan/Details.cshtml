@@ -1,0 +1,106 @@
+﻿@{
+	ViewBag.Title = "Details";
+	ViewBag.Subtitle = "Details";
+}
+
+@section styles {
+	<link href="~/assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link href="~/assets/vendor//select2/css/select2.min.css" rel="stylesheet" />
+	<link href="~/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+	<style>
+		.dataTables_info {
+			color: #969ba0 !important;
+		}
+	</style>
+}
+<div id='myModal' class='modal fade' data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+			<div id='myModalContent'></div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="d-flex mb-3 ">
+		<a href="javascript:void(0);" data-href="/pinjaman/Bayar" class="btn btn-outline-primary mb-3 showMe"><i class="fa fa-plus me-3 scale3"></i>Bayar</a>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					<div class="col-6">
+						<h4 class=" mb-2">A. Purnama, S.T - 3674040306780005</h4>
+						<h4 class="">Jumlah Pembayaran : 5 Bulan</h4>
+					</div>
+					<div class="col-6">
+						<div class="text-end">
+							<h2 class="">Total Pinajaman :	20.000.000</h2>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<table id="tblData" class="table table-responsive table-striped">
+						<thead>
+							<tr>
+								<th>Tahun</th>
+								<th>Bulan</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2023</td>
+								<td>Januari</td>
+								<td>Bayar</td>
+							</tr>
+							<tr>
+								<td>2023</td>
+								<td>Febuari</td>
+								<td>Bayar</td>
+							</tr>
+							<tr>
+								<td>2023</td>
+								<td>Maret</td>
+								<td>Bayar</td>
+							</tr>
+							<tr>
+								<td>2023</td>
+								<td>Mei</td>
+								<td>Bayar</td>
+							</tr>
+							<tr>
+								<td>2023</td>
+								<td>Juni</td>
+								<td>Bayar</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="card-footer">
+					<div class="row">
+						<div class="col-6">
+							<a asp-action="List" asp-controller="Pinjaman" class="btn btn-warning mb-3 ">Kembali</a>
+						</div>
+						<div class="col-6">
+							<div class="text-end">
+								<h4 class="card-title">Total Pembayaran :	10.000.000</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+@section vendorjs {
+	<script src="~/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="~/assets/vendor/select2/js/select2.full.min.js"></script>
+	<script src="~/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+	<script src="~/js/modalForm.js"></script>
+}
+
+@section scripts {
+	<script src="~/pages/main/pinjaman/details.js"></script>
+}

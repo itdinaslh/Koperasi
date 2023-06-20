@@ -1,0 +1,102 @@
+﻿@{
+	ViewBag.Title = "Simpanan Wajib";
+	ViewBag.Subtitle = "Simpanan Wajib";
+}
+
+@section styles {
+	<link href="~/assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link href="~/assets/vendor//select2/css/select2.min.css" rel="stylesheet" />
+	<link href="~/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">	
+	<style>
+		.dataTables_info {
+			color: #969ba0 !important;
+		}
+	</style>
+}
+<!--Modal Window-->
+<div id='myModal' class='modal fade' data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div id='myModalContent'></div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xl-12">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-4 mb-2">
+							<label>Tahun</label>
+							<select id="sTahun" class="form-control"></select>
+						</div>
+						<div class="col-md-4 mb-2">
+							<label>Bulan</label>
+							<select id="sBulan" class="form-control sBulan"></select>
+						</div>
+						<div class="col-md-4 mb-2">
+							<label>Status</label>
+							<select id="sStatus" class="form-control "></select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title">Tabel Data Simpanan Wajib</h4>
+				</div>
+				<div class="card-body">
+					<table id="tblData" class="table table-responsive table-striped">
+						<thead>
+							<tr>
+								<th>Nama</th>
+								<th>NIK</th>
+								<th>Status</th>
+								<th>No Rekening</th>
+								<th>Total SW</th>
+								<th>Aksi</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>A. Purnama, S.T</td>
+								<td>3674040306780005</td>
+								<td>PNS</td>
+								<td>188325</td>
+								<td>1.000.000</td>
+								<td><bottom class="btn btn-sm btn-danger mr-2">Gagal</bottom></td>
+							</tr>
+							<tr>
+								<td>Firly Kardianto</td>
+								<td>3275090603820010</td>
+								<td>PJLP</td>
+								<td>0812880</td>
+								<td>800.000</td>
+								<td><bottom class="btn btn-sm btn-danger mr-2">Gagal</bottom></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<a href="javascript:void(0);"  class="flatbtn showMe" data-href="/simpanan_wajib/create">+</a>
+</div>
+
+@section vendorjs {
+	<script src="~/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="~/assets/vendor/select2/js/select2.full.min.js"></script>
+	<script src="~/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+	<script src="~/js/modalForm.js"></script>
+}
+
+@section scripts {
+	<script src="~/pages/main/sw/list.js"></script>
+}

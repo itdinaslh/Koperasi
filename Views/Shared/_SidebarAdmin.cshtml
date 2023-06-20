@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="ai-icon" aria-expanded="false">
+                <a asp-action ="List" asp-controller="SW" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-id-card-1"></i>
                     <span class="nav-text">Simpanan Wajib</span>
                 </a>
@@ -64,15 +64,15 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="ai-icon" aria-expanded="false">
+                <a asp-action="List" asp-controller="Pinjaman" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-networking"></i>
-                    <span class="nav-text">Pembayaran</span>
+                    <span class="nav-text">Pinjaman</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="ai-icon" aria-expanded="false">
+                <a asp-action="List" asp-controller="Pembiyaan" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-folder"></i>
-                    <span class="nav-text">Tagihan</span>
+                    <span class="nav-text">Pembiyaan Barang</span>
                 </a>
             </li>
             <li>
@@ -86,6 +86,9 @@
                     <li><a asp-controller="Golongan" asp-action="Index">Golongan</a></li>
                     <li><a asp-controller="Barang" asp-action="JenisIndex">Jenis Barang</a></li>
                     <li><a asp-controller="Barang" asp-action="MerkIndex">Merk Barang</a></li>
+                    <li><a asp-controller="Barang" asp-action="TipeIndex">Tipe Barang</a></li>
+                    <li><a asp-controller="Profit" asp-action="Index">Profit</a></li>
+                </ul>
                 </ul>
             </li>
         </ul>

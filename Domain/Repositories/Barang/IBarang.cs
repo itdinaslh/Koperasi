@@ -8,7 +8,11 @@ public interface IBarang
 
     IQueryable<MerkBarang> MerkBarangs { get; }
 
+    IQueryable<TipeBarang> TipeBarangs { get; }
+
     Task SaveJenisBarang(JenisBarang jenis);
 
     Task SaveMerkBarang(MerkBarang merk);
+
+    Task SaveTipeBarang(TipeBarang tipe);
 }

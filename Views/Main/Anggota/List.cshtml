@@ -12,7 +12,14 @@
 		}
 	</style>
 }
-
+<!--Modal Window-->
+<div id='myModal' class='modal fade' data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-xl modal-dialog-centered">
+		<div class="modal-content">
+			<div id='myModalContent'></div>
+		</div>
+	</div>
+</div>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-12">
@@ -38,12 +45,14 @@
 		</div>
 	</div>
 
-	<a class="flatbtn" href="#" data-href="/anggota/create">+</a>
+	<a class="flatbtn showMe" href="#" data-href="/anggota/create">+</a>
 </div>
 
 @section vendorjs {
 	<script src="~/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="~/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>	
+	<script src="~/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+	<script src="~/js/modalForm.js"></script>
+
 }
 
 @section scripts {

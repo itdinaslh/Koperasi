@@ -1,0 +1,30 @@
+﻿
+<div class="modal-header">
+    <h4 class="modal-title">Bayar Pinjaman (A. Purnama, S.T - 3674040306780005)</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
+</div>
+
+<div class="modal-body mx-50 pb-3">
+    <form action="/simpanan_wajib/save" class="row gy-1 gx-2 mt-75" method="post">
+        <input type="hidden" />
+        <div class="col-12">
+            <div class="form-group mb-2">
+                <h4 class="form-label">Pembayaran  Sebelumnya : Juni 2023</h4>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Tahun</label>
+                <input type="text" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Bulan</label>
+                <select id="sBulan" class="form-control"></select>
+                <span class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-12 text-end mt-2">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-success">Simpan</button>
+        </div>
+    </form>
+</div>

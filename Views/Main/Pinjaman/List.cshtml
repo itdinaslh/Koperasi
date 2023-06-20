@@ -1,0 +1,81 @@
+﻿@{
+	ViewBag.Title = "Pinjaman";
+	ViewBag.Subtitle = "Pinjaman";
+}
+
+@section styles {
+	<link href="~/assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link href="~/assets/vendor//select2/css/select2.min.css" rel="stylesheet" />
+	<link href="~/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">	
+	<style>
+		.dataTables_info {
+			color: #969ba0 !important;
+		}
+	</style>
+}
+<div id='myModal' class='modal fade' data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+			<div id='myModalContent'></div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title">Tabel Data Pinjaman</h4>
+				</div>
+				<div class="card-body">
+					<table id="tblData" class="table table-responsive table-striped">
+						<thead>
+							<tr>
+								<th>Nama</th>
+								<th>NIK</th>
+								<th>Total Pinjaman</th>
+								<th>Angsuran/Bulan</th>
+								<th>Total Bulan</th>
+								<th>Sisa Bulan</th>
+								<th>Aksi</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>A. Purnama, S.T</td>
+								<td>3674040306780005</td>
+								<td>20.000.000</td>
+								<td>2.000.00</td>
+								<td>10</td>
+								<td>5</td>
+								<td><buttom class="btn btn-sm btn-success me-2 showMe" data-href="/pinjaman/bayar">Bayar</buttom><a asp-action="Details" asp-controller="Pinjaman" class="btn btn-sm btn-info mr-2">Details</a></td>
+							</tr>
+							<tr>
+								<td>Firly Kardianto</td>
+								<td>3275090603820010</td>
+								<td>10.000.000</td>
+								<td>1.000.00</td>
+								<td>10</td>
+								<td>5</td>
+								<td><bottom class="btn btn-sm btn-success me-2">Bayar</bottom><a asp-action="Details" asp-controller="Pinjaman" class="btn btn-sm btn-info mr-2">Details</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<a class="flatbtn showMe" href="#" data-href="/pinjaman/create">+</a>
+</div>
+
+@section vendorjs {
+	<script src="~/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="~/assets/vendor/select2/js/select2.full.min.js"></script>
+	<script src="~/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+	<script src="~/js/modalForm.js"></script>
+}
+
+@section scripts {
+	<script src="~/pages/main/pinjaman/list.js"></script>
+}
